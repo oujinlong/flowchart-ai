@@ -1,0 +1,203 @@
+/**
+ * @name common.css
+ * @version v1.1.0
+ * @desc 工具框架基本样式
+ */
+html, body, .joint-app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  user-select: none;
+  font-family: sans-serif, Arial;
+  overflow: hidden;
+}
+
+.app-header {
+  position: relative;
+  width: 100%;
+}
+
+.app-body {
+  position: relative;
+  height: -moz-calc(100% - 60px);
+  height: -webkit-calc(100% - 60px);
+  height: calc(100% - 60px);
+}
+
+.app-title {
+  display: inline-block;
+  width: 240px;
+  height: 100%;
+  padding: 0;
+}
+
+.app-title > h1 {
+  color: #fff;
+  font-size: 18px;
+  line-height: 60px;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 0 0 30px;
+}
+
+/*  Paper  */
+.paper-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  left: 240px;
+  right: 240px;
+}
+
+/*  Inspector  */
+.inspector-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 240px; /* (navigator + jsonview) height */
+  width: 240px;
+  box-sizing: border-box;
+}
+.object-property[data-property$="/fill"],
+.object-property[data-property$="/stroke"],
+.field[data-field$="/fill"],
+.field[data-field$="/stroke"] {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+.joint-select-box.joint-color-palette .select-box-option:nth-child(2):not(.hover) {
+  border: inset;
+  border-width: 1px;
+}
+
+.joint-inspector-select-box-options {
+  width: 190px;
+}
+
+/*  Jsonview  */
+.jsonview-container {
+  position: absolute;
+  right: 0;
+  bottom: 120px;  /* navigator height */
+  width: 240px;
+  height: 120px;
+}
+.jsonview-container .joint-jsonview {
+  padding: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+.jsonview-container .joint-jsonview .joint-jsonview-group {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2px;
+}
+.jsonview-container .joint-jsonview .codearea {
+  background-color: darkblue;
+  color: #FFFFFF;
+  font-size: 10pt;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  top: 0;
+  overflow: auto;
+  padding: 2px;
+}
+
+
+/*  Navigator  */
+.navigator-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 240px;
+  height: 120px;
+}
+
+/*  Stencil  */
+.stencil-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 100%;
+}
+
+.joint-stencil .joint-element[data-type="standard.Image"] text,
+.joint-stencil .joint-element[data-type="standard.Cylinder"] text,
+.joint-stencil .joint-element[data-type="devs.Atomic"] .inPorts text,
+.joint-stencil .joint-element[data-type="devs.Atomic"] .outPorts text,
+.joint-stencil .joint-element[data-type="pn.Transition"] text,
+.joint-stencil .joint-element .joint-port text {
+  display: none;
+}
+
+.joint-stencil .joint-element.joint-type-uml rect,
+.joint-stencil .joint-element.joint-type-uml path {
+  stroke: #4a4d6e;
+}
+
+/*  Toolbar  */
+.toolbar-container {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  left: 240px;
+  right: 0;
+  box-sizing: border-box;
+}
+.toolbar-container .joint-toolbar {
+  width: 100%;
+  height: 100%;
+}
+
+.toolbar-container label {
+  white-space: nowrap;
+}
+
+.toolbar-container button:not(:empty) {
+  padding: 0 4px;
+}
+
+.toolbar-container button.joint-widget[data-type="zoomIn"],
+.toolbar-container button.joint-widget[data-type="zoomOut"] {
+  display: none;
+}
+
+.joint-dialog.joint-lightbox .fg {
+  background-color: #F6F6F6;
+}
+
+/* TODO */
+.todo {
+  background-color: #474747!important;
+}
+.todo > div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #E1E1E1;
+  text-transform: uppercase;
+  border: #bbbbbb solid 2px;
+  padding-left: 10px;
+}
